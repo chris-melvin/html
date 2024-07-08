@@ -15,13 +15,22 @@ body {
 body {
   display: flex;
   flex-direction: column;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-
 .container {
   flex: 1 0 auto;
 }
+/* end of sticky footer */
 
 /* navigation */
+.nav__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
 .nav__container {
   display: flex;
   justify-content: space-between;
@@ -36,6 +45,16 @@ body {
   gap: 1rem;
 }
 
+.nav__item {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav__item-current {
+  color: #7798ab;
+}
+
 /* footer */
 .footer__container {
   width: 100%;
@@ -48,19 +67,13 @@ body {
 }
 
 /* start of home  */
-.blog__container {
+.blog__list--container {
   display: flex;
   flex-direction: column;
-  max-width: 596px;
-  margin: 10px auto;
+  align-items: center;
   margin-bottom: 60px;
   gap: 1rem;
-}
-
-.blog__card {
-  padding: 1rem;
-  border: 1px solid #e9ecef;
-  border-radius: 4px;
+  padding: 8px;
 }
 
 /* end of home */
@@ -68,14 +81,29 @@ body {
 /* start of about us */
 
 .about__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 8px;
+  flex-wrap: wrap;
+}
+.about__content {
   max-width: 596px;
-  margin: 10px auto;
+}
+.about__image {
+  width: 100%;
+  max-width: 220px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.about__container h1 {
+.about__content > h1 {
   margin-bottom: 1rem;
+  font-size: 2.5rem;
 }
-.about__container > p {
+.about__content > p {
   margin-bottom: 1rem;
 }
 
@@ -99,3 +127,65 @@ body {
 }
 
 /* end of blog */
+
+/* start of blog card */
+
+.blog__card {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: box-shadow 0.3s ease;
+  max-width: 596px;
+}
+
+.blog__card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-date {
+  display: block;
+  font-size: 12px;
+  color: #888;
+}
+
+.card-title-link {
+  text-decoration: none;
+}
+
+.card-title:hover {
+  color: #7798ab;
+}
+
+.card-title {
+  margin: 8px 0 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.card-description {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* end of blog card */
+
+/* start of blog post */
+.blog__content-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
