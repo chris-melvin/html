@@ -134,7 +134,6 @@ body {
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: white;
   transition: box-shadow 0.3s ease;
   max-width: 596px;
 }
@@ -188,4 +187,32 @@ body {
   height: 300px;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.rounded-box {
+  border-top-left-radius: 10px;
+  border-radius: 17em;
+}
+
+.shadowbox {
+  box-shadow: 0 20px 30px -10px;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+}
+
+img[src*="unsplash"] {
+  padding: 12px;
+}
+
+article:nth-of-type(2n) {
+  background-color: #333;
+  color: #f8f9fa;
+}
+
+article:nth-of-type(2n) .card-title {
+  color: #f8f9fa;
 }
