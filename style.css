@@ -216,3 +216,22 @@ article:nth-of-type(2n) {
 article:nth-of-type(2n) .card-title {
   color: #f8f9fa;
 }
+
+.paragraph::first-letter {
+  font-size: 40px;
+  margin: 5px;
+}
+
+a:link {
+  color: #8ecae6;
+}
+a:visited {
+  color: #219ebc;
+}
+a:hover {
+  color: #fb8500;
+}
+
+a:active {
+  color: #ffb703;
+}
