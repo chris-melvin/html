@@ -11,6 +11,9 @@ body {
   margin: 0;
 }
 
+:root {
+  --primary: #219ebc;
+}
 /* handles sticky footer */
 body {
   display: flex;
@@ -52,7 +55,7 @@ body {
 }
 
 .nav__item-current {
-  color: #7798ab;
+  color: var(--primary);
 }
 
 /* footer */
@@ -136,9 +139,11 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
   max-width: 596px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog__card:hover {
+  transform: scale(1.02) translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -163,7 +168,7 @@ body {
 }
 
 .card-title:hover {
-  color: #7798ab;
+  color: var(--primary);
 }
 
 .card-title {
@@ -176,7 +181,6 @@ body {
   margin: 8px 0 0;
   font-size: 14px;
   line-height: 1.5;
-  color: #666;
 }
 
 /* end of blog card */
@@ -201,7 +205,7 @@ body {
 .box {
   height: 200px;
   width: 200px;
-  background-color: red;
+  background-color: rgba(226, 18, 35, 0.625);
 }
 
 img[src*="unsplash"] {
@@ -217,21 +221,24 @@ article:nth-of-type(2n) .card-title {
   color: #f8f9fa;
 }
 
+article:nth-of-type(2n) .card-title:hover {
+  color: var(--primary);
+}
 .paragraph::first-letter {
   font-size: 40px;
   margin: 5px;
 }
 
 a:link {
-  color: #8ecae6;
+  color: #0077b6;
 }
 a:visited {
-  color: #219ebc;
+  color: #00b4d8;
 }
 a:hover {
-  color: #fb8500;
+  color: #90e0ef;
 }
 
 a:active {
-  color: #ffb703;
+  color: #caf0f8;
 }
