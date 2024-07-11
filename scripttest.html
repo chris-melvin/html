@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="first">
+      hello
+      <div id="first-child">hello</div>
+    </div>
+
+    <div id="">
+      hello
+      <div id="first-child">hello</div>
+    </div>
+    <ul>
+      <li>first list</li>
+      <li>second list</li>
+    </ul>
+
+    <button onclick="alert(this.innerHTML)">click me</button>
+    <p id="paragraph">first paragraph</p>
+
+    <input type="button" onclick="countSheep()" value="Count Sheep!" />
+
+    <input type="button" id="buttonId" value="click me" />
+
+    <script>
+      const p = document.createElement("p");
+
+      p.className = "paragraph";
+      p.innerHTML = "This is a paragraph";
+
+      document.body.appendChild(p);
+
+      const item = document.createElement("div");
+
+      const item2 = document.createElement("div");
+
+      item.className = "item";
+      item.innerHTML = "This is an item 1";
+
+      item2.className = "item";
+      item2.innerHTML = "This is an item 2";
+
+      let paragraph = document.getElementById("paragraph");
+
+      paragraph.before(item);
+      paragraph.after(item2);
+
+      function countSheep() {
+        for (let i = 0; i <= 3; i++) {
+          alert(`Sheep number: ${i}!`);
+        }
+      }
+
+      function handler1() {
+        alert("function 1");
+      }
+
+      function handler2() {
+        alert("function 2");
+      }
+
+      let button = document.getElementById("buttonId");
+
+      button.onclick = () => alert("Hello World");
+
+      button.addEventListener("click", handler1);
+      button.addEventListener("click", handler2);
+    </script>
+  </body>
+</html>
