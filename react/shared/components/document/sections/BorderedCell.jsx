@@ -1,7 +1,12 @@
 import { View } from "@react-pdf/renderer";
 import React from "react";
 
-const BorderedCell = ({ children, style, disableBottomBorder, disableRightBorder }) => (
+const BorderedCell = ({
+  children,
+  style,
+  disableBottomBorder,
+  disableRightBorder,
+}) => (
   <View
     style={[
       {
@@ -10,7 +15,6 @@ const BorderedCell = ({ children, style, disableBottomBorder, disableRightBorder
         borderRightWidth: disableRightBorder ? 0 : 1,
         borderColor: "black",
         fontFamily: "Source Sans",
-        fontWeight: 400,
         fontSize: 11.52,
         paddingHorizontal: 3,
         textAlign: "center",

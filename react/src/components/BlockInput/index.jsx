@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   smallSquare: {
     // minWidth: 14,
     width: ".11in",
-    height: ".15in",
+    height: ".13in",
     alignSelf: "center",
     marginRight: 5,
     borderTopWidth: 1,
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const CheckBoxInput = ({
+const BlockInput = ({
   children,
   label,
   style,

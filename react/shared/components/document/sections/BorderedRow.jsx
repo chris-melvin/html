@@ -9,7 +9,6 @@ const BorderedRow = ({ children, style }) => (
         borderBottomWidth: 1,
         borderColor: "black",
         fontFamily: "Source Sans",
-        fontWeight: 400,
         fontSize: 11.52,
         display: "flex",
         flexDirection: "row",

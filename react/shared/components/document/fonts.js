@@ -4,10 +4,22 @@ const registerPoppins = () => {
   Font.register({
     family: "Poppins",
     fonts: [
-      { fontWeight: 400, src: "https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrFJDUc1NECPY.ttf" },
-      { fontWeight: "normal", src: "https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrFJDUc1NECPY.ttf" },
-      { fontWeight: "semibold", src: "https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6V1tvFP-KUEg.ttf" },
-      { fontWeight: "bold", src: "https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7V1tvFP-KUEg.ttf" },
+      {
+        fontWeight: 400,
+        src: "https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrFJDUc1NECPY.ttf",
+      },
+      {
+        fontWeight: "normal",
+        src: "https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrFJDUc1NECPY.ttf",
+      },
+      {
+        fontWeight: "semibold",
+        src: "https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6V1tvFP-KUEg.ttf",
+      },
+      {
+        fontWeight: "bold",
+        src: "https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7V1tvFP-KUEg.ttf",
+      },
       {
         fontWeight: 400,
         fontStyle: "italic",
@@ -86,10 +98,55 @@ const registerMinionPro = () => {
   });
 };
 
+const registerArial = () => {
+  Font.register({
+    family: "Arial",
+    fonts: [
+      {
+        fontWeight: 400,
+        src: "https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrFJDUc1NECPY.ttf",
+      },
+    ],
+  });
+};
+
+const registerArialNarrow = () => {
+  Font.register({
+    family: "Arial Narrow",
+    fonts: [
+      {
+        fontWeight: 400,
+        src: "../../../fonts/arialnarrow.ttf",
+      },
+    ],
+  });
+};
+
+const registerTimesNewRoman = () => {
+  Font.register({
+    family: "TimesNewRoman",
+    fonts: [
+      {
+        fontWeight: "regular",
+        src: "https://fonts.cdnfonts.com/css/times-new-roman",
+      },
+    ],
+  });
+};
+
 const registerCustomWordWrapping = () => {
   const hyphenationCallback = (word) => [word];
 
   Font.registerHyphenationCallback(hyphenationCallback);
 };
 
-export { registerPoppins, registerSourceCodePro, registerSourceSans, registerMinionPro, registerCustomWordWrapping };
+export {
+  registerPoppins,
+  registerSourceCodePro,
+  registerSourceSans,
+  registerMinionPro,
+  registerCustomWordWrapping,
+  registerArial,
+  registerArialNarrow,
+  registerTimesNewRoman,
+};

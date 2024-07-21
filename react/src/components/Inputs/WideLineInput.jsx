@@ -21,7 +21,6 @@ const styles = StyleSheet.create({
   fieldLabel: {
     paddingVertical: 2,
     borderTopWidth: 1,
-    borderRightWidth: 1,
     borderColor: "black",
     textAlign: "center",
     fontSize: 8,

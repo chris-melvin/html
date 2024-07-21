@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     objectFit: "scale-down",
   },
   headerRightOrgName: {
-    fontWeight: "bold",
+    // fontWeight: "bold",
     marginBottom: 8,
   },
   headerRightOrgDetails: {
@@ -53,7 +53,9 @@ const styles = StyleSheet.create({
 const PDFHeader = ({ organization = {} }) => (
   <View style={styles.header}>
     <View style={styles.headerLeft}>
-      {organization?.logo && <Image style={styles.headerLogo} src={organization?.logo} />}
+      {organization?.logo && (
+        <Image style={styles.headerLogo} src={organization?.logo} />
+      )}
     </View>
     <View style={styles.headerRight}>
       <Text style={styles.headerRightOrgName}>{organization?.name}</Text>
@@ -66,9 +68,21 @@ const PDFHeader = ({ organization = {} }) => (
           </View>
         </View>
         <View style={styles.headerRightOrgDetailsRight}>
-          <Text style={styles.headerRightOrgDetailsRightDOH} >DOH: {organization?.details?.doh_code}</Text>
-          <Text>{organization?.contact?.find(item => item?.type === "landline")?.value}</Text>
-          <Text>{organization?.contact?.find(item => item?.type === "website")?.value}</Text>
+          <Text style={styles.headerRightOrgDetailsRightDOH}>
+            DOH: {organization?.details?.doh_code}
+          </Text>
+          <Text>
+            {
+              organization?.contact?.find((item) => item?.type === "landline")
+                ?.value
+            }
+          </Text>
+          <Text>
+            {
+              organization?.contact?.find((item) => item?.type === "website")
+                ?.value
+            }
+          </Text>
         </View>
       </View>
     </View>

@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   doctorName: {
-    fontWeight: "bold",
+    // fontWeight: "bold",
   },
   doctorDetails: {
     fontFamily: "Source Code Pro",
@@ -38,13 +38,23 @@ const styles = StyleSheet.create({
 const Signature = ({ signature, customStyles, index }) => (
   <View style={{ ...styles.signatureWrapper, ...customStyles }}>
     <View style={styles.signatureImageContainer}>
-      {signature?.date && signature?.url ? <Image style={styles.signatureImage} src={signature?.url} /> : ""}
+      {signature?.date && signature?.url ? (
+        <Image style={styles.signatureImage} src={signature?.url} />
+      ) : (
+        ""
+      )}
     </View>
-    <Text style={styles.header}>{signature?.header && !index ? signature?.header : ''}</Text>
+    <Text style={styles.header}>
+      {signature?.header && !index ? signature?.header : ""}
+    </Text>
     <View style={styles.doctorDetails}>
       <Text style={styles.doctorName}>{signature?.name}</Text>
       <Text>{signature?.title}</Text>
-      {signature?.specializations ? <Text>{signature?.specializations}</Text> : ""}
+      {signature?.specializations ? (
+        <Text>{signature?.specializations}</Text>
+      ) : (
+        ""
+      )}
       {signature?.prc ? <Text>PRC: {signature?.prc}</Text> : ""}
       {signature?.date ? <Text>{signature?.date}</Text> : ""}
     </View>

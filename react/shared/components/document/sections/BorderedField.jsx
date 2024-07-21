@@ -1,7 +1,15 @@
 import { Text, View } from "@react-pdf/renderer";
 import React from "react";
 
-const BorderedField = ({ label, children, disableRightBorder, style, horizontal, small, customHeight }) => {
+const BorderedField = ({
+  label,
+  children,
+  disableRightBorder,
+  style,
+  horizontal,
+  small,
+  customHeight,
+}) => {
   const valueHeight = customHeight || (small ? "0.245in" : "0.34in");
   return (
     <View

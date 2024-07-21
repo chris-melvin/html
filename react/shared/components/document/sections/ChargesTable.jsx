@@ -6,7 +6,7 @@ import TextField from "./TextFields";
 const styles = StyleSheet.create({
   tableHeader: {
     fontSize: 10,
-    fontWeight: "bold",
+    // fontWeight: "bold",
     display: "flex",
     flexDirection: "row",
     flexWrap: "nowrap",

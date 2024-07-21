@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
   },
   label: {
-    fontWeight: "bold",
+    // fontWeight: "bold",
   },
   value: {
     paddingLeft: 10,
@@ -21,15 +21,35 @@ const styles = StyleSheet.create({
   },
 });
 
-const SectionField = ({ field, customContainerStyles, customLabelStyles, vertical }) => {
+const SectionField = ({
+  field,
+  customContainerStyles,
+  customLabelStyles,
+  vertical,
+}) => {
   if (!field?.label && !field?.value) return "";
   return (
-    <View style={{ ...styles.container, ...(vertical ? styles.containerVertical : null), ...customContainerStyles }}>
+    <View
+      style={{
+        ...styles.container,
+        ...(vertical ? styles.containerVertical : null),
+        ...customContainerStyles,
+      }}
+    >
       <View style={{ ...styles.label, ...(customLabelStyles || {}) }}>
         <TextField value={field?.label} />
       </View>
-      <View style={{ ...styles.value, ...(vertical ? { paddingLeft: 0, paddingTop: 6 } : null) }}>
-        {field?.valueIsComponent ? field?.value : <TextField value={field?.value} />}
+      <View
+        style={{
+          ...styles.value,
+          ...(vertical ? { paddingLeft: 0, paddingTop: 6 } : null),
+        }}
+      >
+        {field?.valueIsComponent ? (
+          field?.value
+        ) : (
+          <TextField value={field?.value} />
+        )}
       </View>
     </View>
   );

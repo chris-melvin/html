@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     textAlign: "center",
     fontFamily: "Source Sans",
-    fontWeight: 400,
     marginRight: 3,
   },
   placeholder: {
@@ -24,14 +23,24 @@ const styles = StyleSheet.create({
   },
   descriptionText: {
     fontFamily: "Source Sans",
-    fontWeight: 400,
     letterSpacing: -0.5,
     fontSize: 7.68,
     alignSelf: "center",
   },
 });
 
-const TextInput = ({ label, value, placeholder, description, style, placeholderStyle, lineStyle, width = 20, fullWidth, debug }) => (
+const TextInput = ({
+  label,
+  value,
+  placeholder,
+  description,
+  style,
+  placeholderStyle,
+  lineStyle,
+  width = 20,
+  fullWidth,
+  debug,
+}) => (
   <Row debug={debug} style={[styles.fieldContainer, style]}>
     <View style={styles.fieldLabel}>
       <Text>{label}</Text>
@@ -45,7 +54,11 @@ const TextInput = ({ label, value, placeholder, description, style, placeholderS
       ]}
     >
       {value && <Text>{value}</Text>}
-      {placeholder && !value && <Text style={[styles.placeholder, placeholderStyle]}>{placeholder}</Text>}
+      {placeholder && !value && (
+        <Text style={[styles.placeholder, placeholderStyle]}>
+          {placeholder}
+        </Text>
+      )}
     </View>
   </Row>
 );

@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     objectFit: "scale-down",
   },
   headerRightOrgName: {
-    fontWeight: "bold",
+    // fontWeight: "bold",
     marginBottom: 8,
   },
   headerRightOrgDetails: {
@@ -69,9 +69,18 @@ const Header = ({ organization }) => {
         <Text style={styles.headerRightOrgName}>{organization?.name}</Text>
         <View style={styles.headerRightOrgDetails}>
           <View style={styles.headerRightOrgDetailsLeft}>
-            <Text style={styles.headerRightAddress}>{stringifyAddress(orgAddress)}</Text>
-            <Text>{organization?.contact?.find((x) => x?.type === "landline")?.value}</Text>
-            <Text>{organization?.contact?.find((x) => x?.type === "website")?.value}</Text>
+            <Text style={styles.headerRightAddress}>
+              {stringifyAddress(orgAddress)}
+            </Text>
+            <Text>
+              {
+                organization?.contact?.find((x) => x?.type === "landline")
+                  ?.value
+              }
+            </Text>
+            <Text>
+              {organization?.contact?.find((x) => x?.type === "website")?.value}
+            </Text>
           </View>
           <View style={styles.headerRightOrgDetailsRight}>
             <Text>TIN: {organization?.details?.tin}</Text>
