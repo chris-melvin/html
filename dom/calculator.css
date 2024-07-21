@@ -1,0 +1,55 @@
+/* <h1>Investment Calculator</h1>
+<form id="investment-form">
+    <label for="investment-amount">Investment Amount:</label>
+    <input type="number" id="investment-amount" required>
+    <label for="rate">Annual Interest Rate:</label>
+    <input type="number" id="rate" required>
+    <label for="years">Number of Years:</label>
+    <input type="number" id="years" required>
+    <button type="submit">Calculate</button>
+</form>
+<div id="result"></div> */
+
+/* style the html above */
+#investment-form label {
+  display: block;
+  margin-top: 1rem;
+}
+
+#investment-form input {
+  margin-top: 0.5rem;
+}
+
+#result {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+#investment-form label {
+  display: block;
+  margin-top: 1rem;
+}
+
+#investment-form input {
+  margin-top: 0.5rem;
+}
+
+#result {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
