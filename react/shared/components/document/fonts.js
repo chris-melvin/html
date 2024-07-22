@@ -106,6 +106,14 @@ const registerArial = () => {
         fontWeight: 400,
         src: "https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrFJDUc1NECPY.ttf",
       },
+      {
+        fontWeight: 600,
+        src: "../../../fonts/ARIALBD.TTF",
+      },
+      {
+        fontStyle: "italic",
+        src: "../../../fonts/ARIALI.TTF",
+      },
     ],
   });
 };
@@ -118,6 +126,11 @@ const registerArialNarrow = () => {
         fontWeight: 400,
         src: "../../../fonts/arialnarrow.ttf",
       },
+      {
+        fontWeight: 400,
+        fontStyle: "italic",
+        src: "../../../fonts/ARIALNI.TTF",
+      },
     ],
   });
 };
@@ -127,8 +140,17 @@ const registerTimesNewRoman = () => {
     family: "TimesNewRoman",
     fonts: [
       {
-        fontWeight: "regular",
+        fontWeight: 400,
         src: "https://fonts.cdnfonts.com/css/times-new-roman",
+      },
+      {
+        fontStyle: "italic",
+        src: "../../../fonts/FontsFree-Net-times-new-roman-italic.ttf",
+      },
+      {
+        fontWeight: "bold",
+        fontStyle: "italic",
+        src: "../../../fonts/times-new-roman-bold-italic.ttf",
       },
     ],
   });

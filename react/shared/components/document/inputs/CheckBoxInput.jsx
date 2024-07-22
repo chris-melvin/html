@@ -5,8 +5,8 @@ import BoxInput from "./BoxInput";
 const styles = StyleSheet.create({
   label: {
     textAlign: "center",
-    fontFamily: "Source Sans",
-    fontSize: 11.52,
+    fontFamily: "Arial Narrow",
+    fontSize: 8,
     paddingTop: 2,
     flexWrap: "nowrap",
     overflow: "visible",
@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
   smLabel: {
     alignSelf: "center",
     marginRight: 8,
-    fontFamily: "Source Sans",
-    fontSize: 10,
+    fontFamily: "Arial Narrow",
+    fontSize: 8,
   },
 });
 
@@ -49,6 +49,8 @@ const CheckBoxInput = ({
   isSmall = true,
   customSquareSize,
   boxMarginRight = "0.05in",
+  customWidth = ".16in",
+  customHeight = ".18in",
 }) => (
   <Row
     style={{
@@ -72,7 +74,11 @@ const CheckBoxInput = ({
         <View
           style={[
             styles.square,
-            { minWidth: customSquareSize, height: customSquareSize },
+            {
+              minWidth: customWidth,
+              height: customHeight,
+              marginRight: boxMarginRight,
+            },
           ]}
         />
         {label && <Text style={styles.label}>{label}</Text>}

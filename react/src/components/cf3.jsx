@@ -31,6 +31,7 @@ import {
   registerTimesNewRoman,
   registerSourceSans,
 } from "../../shared/components/document/fonts";
+import Dash from "../../shared/components/document/typography/Dash";
 
 registerArialNarrow();
 registerArial();
@@ -58,7 +59,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     width: "2.41in",
-    height: "1in",
+    height: "1.1in",
     paddingVertical: ".10in",
   },
   text: {
@@ -120,7 +121,7 @@ const CF3 = () => (
           style={{
             width: "100%",
             justifyContent: "space-between",
-            ...styles.text,
+            marginBottom: ".78in",
           }}
         >
           <Column
@@ -137,9 +138,10 @@ const CF3 = () => (
             <View>
               <Text
                 style={{
-                  fontWeight: "bold",
+                  fontWeight: 600,
                   fontSize: "8px",
                   marginBottom: ".18in",
+                  fontFamily: "Arial",
                 }}
               >
                 This form may be reproduced and is NOT FOR SALE
@@ -154,7 +156,15 @@ const CF3 = () => (
                   width: "1.25in",
                 }}
               >
-                <Text style={{ fontSize: "28px" }}>CF3</Text>
+                <Text
+                  style={{
+                    fontSize: "28px",
+                    fontFamily: "Arial",
+                    fontWeight: 400,
+                  }}
+                >
+                  CF3
+                </Text>
                 <Text>(Claim Form)</Text>
                 <Text>revised November 2013</Text>
               </View>
@@ -171,6 +181,7 @@ const CF3 = () => (
               fontWeight: "600",
               marginVertical: ".02in",
               fontSize: "9.6px",
+              fontFamily: "Arial",
             }}
           >
             PART I - PATIENT'S CLINICAL RECORD
@@ -178,7 +189,8 @@ const CF3 = () => (
           <FieldInput height="0" />
           <FieldInput height=".02in" />
         </Column>
-        <Row style={{ marginVertical: ".1in" }}>
+        {/* Part 1, number 1 */}
+        <Row style={{ marginVertical: ".1in", ...styles.text }}>
           <View style={{ marginRight: ".45in" }}>
             <Text style={{ fontSize: "8.76px" }}>
               1. PhilHealth Accreditation No. (PAN) - Institutional Health Care
@@ -189,11 +201,13 @@ const CF3 = () => (
             <SegmentedLineInput number={9} width=".24in" innerHeight={12} />
           </View>
         </Row>
+        {/* Part 1, number 2 */}
         <Row
           style={{
             marginVertical: ".1in",
             display: "flex",
             justifyContent: "space-between",
+            ...styles.text,
           }}
         >
           <Column>
@@ -315,7 +329,9 @@ const CF3 = () => (
         <FieldInput />
         <Row>
           <View style={{ height: "2.1in" }}>
-            <Text style={{ marginTop: ".1in", marginLeft: ".1in" }}>
+            <Text
+              style={{ marginTop: ".1in", marginLeft: ".1in", ...styles.text }}
+            >
               6. Brief History of Present Illness / OB History:
             </Text>
           </View>
@@ -325,7 +341,9 @@ const CF3 = () => (
         <FieldInput />
         <Row>
           <View>
-            <Text style={{ marginTop: ".1in", marginLeft: ".1in" }}>
+            <Text
+              style={{ marginTop: ".1in", marginLeft: ".1in", ...styles.text }}
+            >
               7. Physical Examination ( Pertinent Findings per System )
             </Text>
           </View>
@@ -333,7 +351,7 @@ const CF3 = () => (
 
         <Row>
           <View style={{ marginTop: ".1in", marginLeft: ".1in" }}>
-            <Text>General Survey:</Text>
+            <Text style={styles.text}>General Survey:</Text>
           </View>
         </Row>
 
@@ -342,6 +360,7 @@ const CF3 = () => (
             marginTop: ".2in",
             marginLeft: ".1in",
             marginBottom: ".6in",
+            ...styles.text,
           }}
         >
           <Column style={{ width: "4.95in" }}>
@@ -464,7 +483,9 @@ const CF3 = () => (
         <FieldInput />
         <Row>
           <View style={{ height: "2.18in" }}>
-            <Text style={{ marginTop: ".1in", marginLeft: ".1in" }}>
+            <Text
+              style={{ marginTop: ".1in", marginLeft: ".1in", ...styles.text }}
+            >
               8. Course in the Wards (attach additional sheets if necessary):
             </Text>
           </View>
@@ -473,7 +494,9 @@ const CF3 = () => (
         <FieldInput />
         <Row>
           <View style={{ height: "1.57in" }}>
-            <Text style={{ marginTop: ".1in", marginLeft: ".1in" }}>
+            <Text
+              style={{ marginTop: ".1in", marginLeft: ".1in", ...styles.text }}
+            >
               9. Pertinent Laboratory and Diagnostic Findings: ( CBC,
               Urinalysis, Fecalysis, X-ray, Biopsy, etc. )
             </Text>
@@ -487,6 +510,7 @@ const CF3 = () => (
         <Row
           style={{
             height: ".75in",
+            ...styles.text,
           }}
         >
           <View
@@ -497,23 +521,43 @@ const CF3 = () => (
               marginbottom: ".26in",
             }}
           >
-            <View style={{ marginLeft: ".1in" }}>
+            <View style={{ marginLeft: ".1in", marginRight: ".34in" }}>
               <Text>10. Disposition on Discharge:</Text>
             </View>
             <View>
-              <CheckBoxInput label="Improved" />
+              <CheckBoxInput
+                boxMarginRight=".17in"
+                isSmall={false}
+                label="Improved"
+              />
             </View>
             <View>
-              <CheckBoxInput label="Transferred" />
+              <CheckBoxInput
+                boxMarginRight=".17in"
+                isSmall={false}
+                label="Transferred"
+              />
             </View>
             <View>
-              <CheckBoxInput label="HAMA" />
+              <CheckBoxInput
+                boxMarginRight=".17in"
+                isSmall={false}
+                label="HAMA"
+              />
             </View>
             <View>
-              <CheckBoxInput label="Absconded" />
+              <CheckBoxInput
+                boxMarginRight=".17in"
+                isSmall={false}
+                label="Absconded"
+              />
             </View>
             <View>
-              <CheckBoxInput label="Expired" />
+              <CheckBoxInput
+                boxMarginRight=".17in"
+                isSmall={false}
+                label="Expired"
+              />
             </View>
           </View>
         </Row>
@@ -529,7 +573,8 @@ const CF3 = () => (
           <FieldInput height=".02in" />
           <View
             style={{
-              fontWeight: "bold",
+              fontWeight: 600,
+              fontFamily: "Arial",
               marginVertical: ".02in",
               fontSize: ".14in",
               display: "flex",
@@ -548,7 +593,8 @@ const CF3 = () => (
         <Text
           style={{
             textAlign: "center",
-            fontWeight: "bold",
+            fontWeight: 600,
+            fontFamily: "Arial",
             marginVertical: ".02in",
             fontSize: ".14in",
             color: "#ff0000",
@@ -558,11 +604,17 @@ const CF3 = () => (
         </Text>
         <FieldInput height="0" />
 
-        <Row style={{ marginVertical: ".1in" }}>
+        <Row
+          style={{
+            marginVertical: ".1in",
+            paddingLeft: ".25in",
+            paddingRight: ".1in",
+            ...styles.text,
+          }}
+        >
           <View style={{ marginRight: ".3in" }}>
             <Text style={{ color: "#ff0000" }}>
-              {" "}
-              1. Initial Prenatal Consultation{" "}
+              1. Initial Prenatal Consultation
             </Text>
           </View>
           <View style={{ marginRight: ".3in" }}>
@@ -571,13 +623,27 @@ const CF3 = () => (
         </Row>
 
         {/* 2 */}
-        <View style={{ marginRight: ".3in" }}>
+        <View
+          style={{
+            marginRight: ".3in",
+            paddingLeft: ".25in",
+            paddingRight: ".1in",
+            ...styles.text,
+          }}
+        >
           <Text>
             <Text style={{ color: "#f00" }}>2.</Text> Clinical History and
             Physical Examination
           </Text>
         </View>
-        <Row style={{ marginVertical: ".1in" }}>
+        <Row
+          style={{
+            marginVertical: ".1in",
+            paddingLeft: ".25in",
+            paddingRight: ".1in",
+            ...styles.text,
+          }}
+        >
           <Row>
             <Column
               style={{
@@ -675,13 +741,17 @@ const CF3 = () => (
           </Row>
         </Row>
         {/* 3 */}
-        <View>
+        <View
+          style={{ paddingLeft: ".25in", paddingRight: ".1in", ...styles.text }}
+        >
           <Text>
-            <Text style={{ color: "#f00", marginBottom: ".2in" }}>3.</Text>{" "}
+            <Text style={{ color: "#f00", marginBottom: ".2in" }}>3.</Text>
             Obstetric risk factors
           </Text>
         </View>
-        <Row>
+        <Row
+          style={{ paddingLeft: ".25in", paddingRight: ".1in", ...styles.text }}
+        >
           <Column style={{ marginLeft: ".1in", width: "1.80in" }}>
             {["a. Multiple Pregnancy", "b. Ovarian cyst", "c. Myoma uteri"].map(
               (item) => (
@@ -738,13 +808,18 @@ const CF3 = () => (
             ))}
           </Column>
         </Row>
-        <View>
+        {/* 4 */}
+        <View
+          style={{ paddingLeft: ".25in", paddingRight: ".1in", ...styles.text }}
+        >
           <Text>
             <Text style={{ color: "#f00", marginBottom: ".2in" }}>4. </Text>
             Medical/Surgical risk factors
           </Text>
         </View>
-        <Row>
+        <Row
+          style={{ paddingLeft: ".25in", paddingRight: ".1in", ...styles.text }}
+        >
           <Column style={{ marginLeft: ".1in", width: "1.8in" }}>
             {["a. Hypertension", "b. Heart Disease", "c. Diabetes"].map(
               (item) => (
@@ -818,15 +893,29 @@ const CF3 = () => (
           </Column>
         </Row>
 
-        <View style={{ marginBottom: ".1in" }}>
-          <Text>
-            <Text style={{ color: "#f00" }}>5.</Text> Admitting Diagnosis
-          </Text>
-          <View style={{ width: "100%" }}>
-            <TextInput label="" fullWidth={true} />
+        {/* 5 */}
+        <View
+          style={{
+            marginBottom: ".1in",
+            flexDirection: "row",
+            paddingLeft: ".25in",
+            paddingRight: ".1in",
+            ...styles.text,
+          }}
+        >
+          <View style={{ width: "1in", marginRight: ".2in" }}>
+            <Text>
+              <Text style={{ color: "#f00" }}>5.</Text> Admitting Diagnosis
+            </Text>
           </View>
+          <View
+            style={{ width: "6.18in", borderBottom: 0.5, borderColor: "#000" }}
+          ></View>
         </View>
-        <Row>
+        {/* 6 */}
+        <Row
+          style={{ paddingLeft: ".25in", paddingRight: ".1in", ...styles.text }}
+        >
           <Text>
             <Text style={{ color: "#f00" }}>6.</Text> Delivery Plan
           </Text>
@@ -837,6 +926,9 @@ const CF3 = () => (
             marginLeft: ".1in",
             marginTop: ".24in",
             marginBottom: ".29in",
+            paddingLeft: ".25in",
+            paddingRight: ".1in",
+            ...styles.text,
           }}
         >
           <View style={{ marginRight: ".2in" }}>
@@ -864,7 +956,10 @@ const CF3 = () => (
           </View>
         </Row>
 
-        <Row>
+        {/* 7 */}
+        <Row
+          style={{ paddingLeft: ".25in", paddingRight: ".1in", ...styles.text }}
+        >
           <View>
             <Text>
               <Text style={{ color: "#f00", marginBottom: ".1in" }}>7.</Text>
@@ -877,10 +972,16 @@ const CF3 = () => (
             justifyContent: "space-between",
             marginLeft: ".1in",
             marginRight: ".1in",
+            paddingLeft: ".25in",
+            paddingRight: ".1in",
+            ...styles.text,
           }}
         >
           <View>
-            <Text>a. Prenatal Consultation No.</Text>
+            <Text>
+              <Text style={{ color: "#f00" }}>a. </Text>Prenatal Consultation
+              No.
+            </Text>
           </View>
           <View style={{ display: "flex", flexDirection: "row" }}>
             {Array.from(Array(10).keys()).map((item) => (
@@ -888,7 +989,7 @@ const CF3 = () => (
                 key={item}
                 style={{
                   border: "1px solid black",
-                  paddingHorizontal: ".05in",
+                  paddingHorizontal: ".059in",
                   paddingVertical: ".02in",
                   marginLeft: ".25in",
                 }}
@@ -913,17 +1014,23 @@ const CF3 = () => (
             justifyContent: "space-between",
             marginLeft: ".1in",
             marginBottom: ".1in",
+            paddingLeft: ".25in",
+            paddingRight: ".1in",
+            ...styles.text,
           }}
         >
           <View>
-            <Text>b. Date of visit (mm/ dd/ yy)</Text>
+            <Text>
+              <Text style={{ color: "#f00" }}>b.</Text> Date of visit (mm/ dd/
+              yy)
+            </Text>
           </View>
           <View style={{ display: "flex", flexDirection: "row" }}>
             {Array.from(Array(10).keys()).map((item, index) => (
               <View key={item}>
                 <SegmentedLineInput
                   number={3}
-                  width=".18in"
+                  width=".176in"
                   removeBorderLeft={index !== 0}
                 />
               </View>
@@ -936,10 +1043,15 @@ const CF3 = () => (
             justifyContent: "space-between",
             marginLeft: ".1in",
             marginRight: ".1in",
+            paddingLeft: ".25in",
+            paddingRight: ".1in",
+            ...styles.text,
           }}
         >
           <View>
-            <Text>c. AOG in weeks</Text>
+            <Text>
+              <Text style={{ color: "#f00" }}>c.</Text> AOG in weeks
+            </Text>
           </View>
           <View style={{ display: "flex", flexDirection: "row" }}>
             {Array.from(Array(10).keys()).map((item) => (
@@ -948,9 +1060,8 @@ const CF3 = () => (
                 style={{
                   height: ".2in",
                   border: "1px solid black",
-                  paddingHorizontal: ".2in",
-                  paddingVertical: ".03in",
-                  marginLeft: ".12in",
+                  width: ".41in",
+                  marginLeft: ".13in",
                   marginBottom: ".04in",
                 }}
               ></View>
@@ -958,22 +1069,43 @@ const CF3 = () => (
           </View>
         </Row>
 
-        <Row style={{ marginLeft: ".1in", marginBottom: ".1in" }}>
+        <Row
+          style={{
+            marginLeft: ".1in",
+            marginBottom: ".1in",
+            paddingLeft: ".25in",
+            paddingRight: ".1in",
+            ...styles.text,
+          }}
+        >
           <View>
-            <Text>d. Weight & Vital signs:</Text>
+            <Text>
+              <Text style={{ color: "#f00" }}>d.</Text> Weight & Vital signs:
+            </Text>
           </View>
         </Row>
-        <Column style={{ marginLeft: ".2in", marginRight: ".1in" }}>
+        <Column
+          style={{
+            marginLeft: ".2in",
+            marginRight: ".1in",
+            paddingLeft: ".25in",
+            paddingRight: ".1in",
+            ...styles.text,
+          }}
+        >
           {[
-            "d.1. Weight",
-            "d.2. Cardiac Rate",
-            "d.3. Respiratory Rate",
-            "d.4Blood Pressure",
-            "d.5. Temperature",
-          ].map((item) => (
+            " Weight",
+            " Cardiac Rate",
+            " Respiratory Rate",
+            " Blood Pressure",
+            " Temperature",
+          ].map((item, index) => (
             <Row key={item} style={{ justifyContent: "space-between" }}>
               <View sty>
-                <Text>{item}</Text>
+                <Text>
+                  <Text style={{ color: "#f00" }}>d. {index + 1}.</Text>
+                  {item}
+                </Text>
               </View>
               <View style={{ display: "flex", flexDirection: "row" }}>
                 {Array.from(Array(10).keys()).map((item) => (
@@ -982,9 +1114,8 @@ const CF3 = () => (
                     style={{
                       height: ".2in",
                       border: "1px solid black",
-                      paddingHorizontal: ".2in",
-                      paddingVertical: ".03in",
-                      marginLeft: ".12in",
+                      width: ".41in",
+                      marginLeft: ".13in",
                       marginBottom: ".04in",
                     }}
                   ></View>
@@ -999,16 +1130,25 @@ const CF3 = () => (
         <Text
           style={{
             textAlign: "center",
-            fontWeight: "bold",
+            fontWeight: 600,
+            fontFamily: "Arial",
             marginVertical: ".02in",
             fontSize: ".14in",
+            color: "#f00",
           }}
         >
           DELIVERY OUTCOME
         </Text>
         <FieldInput height="0" />
-
-        <Row style={{ marginVertical: ".1in" }}>
+        {/* 8 */}
+        <Row
+          style={{
+            marginVertical: ".1in",
+            paddingLeft: ".25in",
+            paddingRight: ".1in",
+            ...styles.text,
+          }}
+        >
           <View style={{ marginRight: ".3in" }}>
             <Text>
               <Text style={{ color: "#f00" }}>8.</Text> Date and Time of
@@ -1031,10 +1171,18 @@ const CF3 = () => (
         </Row>
 
         <Row
-          style={{ marginVertical: ".1in", justifyContent: "space-between" }}
+          style={{
+            marginVertical: ".1in",
+            justifyContent: "space-between",
+            paddingLeft: ".25in",
+            paddingRight: ".1in",
+            ...styles.text,
+          }}
         >
           <View style={{ marginRight: ".3in" }}>
-            <Text>9. Maternal Outcome</Text>
+            <Text>
+              <Text style={{ color: "#f00" }}>9.</Text> Maternal Outcome
+            </Text>
           </View>
           <Row>
             <View style={{ marginRight: ".03in" }}>
@@ -1064,12 +1212,20 @@ const CF3 = () => (
             </View>
           </Row>
         </Row>
-
+        {/* 10 */}
         <Row
-          style={{ marginVertical: ".1in", justifyContent: "space-between" }}
+          style={{
+            marginVertical: ".1in",
+            justifyContent: "space-between",
+            paddingLeft: ".25in",
+            paddingRight: ".1in",
+            ...styles.text,
+          }}
         >
           <View style={{ marginRight: ".3in" }}>
-            <Text>10. Birth Outcome</Text>
+            <Text>
+              <Text style={{ color: "#f00" }}>10.</Text> Birth Outcome
+            </Text>
           </View>
           <Row>
             <View style={{ marginRight: ".1in" }}>
@@ -1098,20 +1254,39 @@ const CF3 = () => (
             </View>
           </Row>
         </Row>
-        <Row style={{ marginVertical: ".1in" }}>
+        {/* 11 */}
+        <Row
+          style={{
+            marginVertical: ".1in",
+            paddingLeft: ".25in",
+            paddingRight: ".1in",
+            ...styles.text,
+          }}
+        >
           <View style={{ marginRight: ".3in" }}>
             <Text>
-              11. Scheduled Postpartum follow-up consultation 1 week after
-              delivery
+              <Text style={{ color: "#f00" }}>11.</Text> Scheduled Postpartum
+              follow-up consultation 1 week after delivery
             </Text>
           </View>
           <View style={{ marginRight: ".3in" }}>
             <SegmentedDateInput style={{ paddingTop: 0 }} />
           </View>
         </Row>
-        <Row style={{ marginVertical: ".1in" }}>
+        {/* 12 */}
+        <Row
+          style={{
+            marginVertical: ".1in",
+            paddingLeft: ".25in",
+            paddingRight: ".1in",
+            ...styles.text,
+          }}
+        >
           <View style={{ marginRight: ".3in" }}>
-            <Text>12. Date and Time of Discharge</Text>
+            <Text>
+              <Text style={{ color: "#f00" }}>12.</Text> Date and Time of
+              Discharge
+            </Text>
           </View>
           <View style={{ marginRight: ".3in" }}>
             <SegmentedDateInput style={{ paddingTop: 0 }} />
@@ -1122,7 +1297,8 @@ const CF3 = () => (
         <Text
           style={{
             textAlign: "center",
-            fontWeight: "bold",
+            fontWeight: 600,
+            fontFamily: "Arial",
             marginVertical: ".02in",
             fontSize: ".14in",
             color: "#f00",
@@ -1132,6 +1308,20 @@ const CF3 = () => (
         </Text>
         <FieldInput height="0" />
 
+        <Row
+          style={{
+            paddingLeft: ".25",
+            paddingRight: ".1in",
+            paddingTop: ".2in",
+            fontFamily: "Arial Narrow",
+            fontStyle: "italic",
+          }}
+        >
+          <Text style={{ marginLeft: "4.66in", marginRight: "1.30in" }}>
+            done
+          </Text>
+          <Text>Remarks</Text>
+        </Row>
         {/* Map from 13 to 18 */}
         {PostPartumCare.map((item, index) => (
           <Row
@@ -1140,6 +1330,9 @@ const CF3 = () => (
               marginVertical: ".1in",
               display: "flex",
               justifyContent: "space-between",
+              paddingLeft: ".25in",
+              paddingRight: ".1in",
+              ...styles.text,
             }}
           >
             <View>
@@ -1172,15 +1365,28 @@ const CF3 = () => (
 
         {/* 19 */}
 
-        <View style={{ border: "1px solid #000" }}>
+        <View
+          style={{
+            border: "1px solid #000",
+            marginLeft: ".25in",
+            marginRight: ".1in",
+            paddingBottom: ".2in",
+          }}
+        >
           <View>
-            <Text>
+            <Text style={styles.text}>
               <Text style={{ color: "#f00" }}>19.</Text> Certification of
               Attending Physician/Midwife:
             </Text>
           </View>
           <View style={{ marginHorizontal: ".4in", marginVertical: ".4in" }}>
-            <Text style={{ fontStyle: "italic" }}>
+            <Text
+              style={{
+                fontStyle: "italic",
+                fontFamily: "TimesNewRoman",
+                fontWeight: "bold",
+              }}
+            >
               I certify that the above information given in this form are true
               and correct.
             </Text>
@@ -1190,16 +1396,59 @@ const CF3 = () => (
               display: "flex",
               alignItems: "flex-end",
               marginLeft: ".12in",
+              ...styles.text,
             }}
           >
             <View style={{ marginRight: "1.14in" }}>
               <StackedBoxInput
                 upperText=""
+                boxWidth="3.06in"
                 lowerText="Signature Over Printed Name of Attending Physician/Midwife"
               />
             </View>
             <View style={{ marginRight: ".3in" }}>
-              <SegmentedDate style={{ paddingTop: 0 }} />
+              <Row>
+                <Column
+                  style={{
+                    marginRight: ".08in",
+                  }}
+                >
+                  <SegmentedLineInput
+                    number={2}
+                    width=".15in"
+                    innerHeight={6}
+                  />
+                </Column>
+                <Dash />
+                <Column
+                  style={{
+                    marginLeft: ".08in",
+                    marginRight: ".08in",
+                  }}
+                >
+                  <SegmentedLineInput
+                    number={2}
+                    width=".15in"
+                    innerHeight={6}
+                  />
+                </Column>
+                <Dash />
+                <Column
+                  style={{
+                    marginLeft: ".08in",
+                    marginRight: ".08in",
+                  }}
+                >
+                  <SegmentedLineInput
+                    number={4}
+                    width=".15in"
+                    innerHeight={6}
+                  />
+                </Column>
+              </Row>
+              <Text style={{ margin: "0 auto", ...styles.text }}>
+                Signed (Month / Day / Year)
+              </Text>
             </View>
           </Row>
         </View>
