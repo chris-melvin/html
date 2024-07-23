@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
     paddingTop: 2,
     flexWrap: "nowrap",
     overflow: "visible",
-    marginRight: 8,
   },
   smallSquare: {
     // minWidth: 14,
@@ -25,8 +24,6 @@ const styles = StyleSheet.create({
     borderColor: "#000",
   },
   square: {
-    minWidth: 18,
-    height: 18,
     marginRight: 5,
     borderTopWidth: 1,
     borderBottomWidth: 1,
@@ -54,7 +51,7 @@ const CheckBoxInput = ({
 }) => (
   <Row
     style={{
-      ...(isSmall ? { maxHeight: 14 } : { marginRight: 5, marginBottom: 3 }),
+      ...(isSmall ? { maxHeight: 14 } : { marginBottom: 3 }),
       ...style,
     }}
   >

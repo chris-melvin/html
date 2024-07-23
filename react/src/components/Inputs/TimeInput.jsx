@@ -1,4 +1,4 @@
-import { StyleSheet, Text } from "@react-pdf/renderer";
+import { StyleSheet, Text, View } from "@react-pdf/renderer";
 import React from "react";
 
 import SegmentedLineInput from "../SegmentedLineInput";
@@ -7,12 +7,21 @@ import Column from "../layout/Column";
 
 const styles = StyleSheet.create({
   label: {
-    alignSelf: "center",
     fontSize: "8.04px",
+    marginTop: ".02in",
+    alignSelf: "flex-start",
+    marginLeft: ".03in",
   },
 });
 
-const TimeInput = ({ bottomLabel = "hh-mm", rightLabel, style, debug }) => (
+const TimeInput = ({
+  bottomLabel = "hh-mm",
+  rightLabel,
+  rightLabelStyle,
+  style,
+  debug,
+  width = ".35in",
+}) => (
   <Row
     style={[
       //   {
@@ -23,10 +32,16 @@ const TimeInput = ({ bottomLabel = "hh-mm", rightLabel, style, debug }) => (
     debug={debug}
   >
     <Column>
-      <SegmentedLineInput number={1} width=".35in" />
+      <Row style={{ alignItems: "flex-end" }}>
+        <SegmentedLineInput number={1} width={width} />
+        {rightLabel ? (
+          <Text style={rightLabelStyle}> {rightLabel}</Text>
+        ) : (
+          <></>
+        )}
+      </Row>
       <Text style={styles.label}>{bottomLabel}</Text>
     </Column>
-    {rightLabel ? <Text>{rightLabel}</Text> : <></>}
   </Row>
 );
 

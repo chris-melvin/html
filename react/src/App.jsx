@@ -13,8 +13,8 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div>
-      <PDFViewer width="1300" height="800">
+    <div style={{ width: "100vw" }}>
+      <PDFViewer width="100%" height="800 ">
         <CF3 />
         {/* <ClaimForm1 /> */}
         {/* <ClaimForm4 /> */}

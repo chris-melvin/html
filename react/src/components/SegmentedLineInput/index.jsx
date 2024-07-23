@@ -3,9 +3,9 @@ import React from "react";
 const styles = StyleSheet.create({
   square: {
     height: 6,
-    borderBottomWidth: 1,
+    borderBottomWidth: 0.7,
     borderLeftWidth: 0,
-    borderRightWidth: 1,
+    borderRightWidth: 0.7,
     borderColor: "#000",
     boxSizing: "border-box",
   },
@@ -16,9 +16,9 @@ const styles = StyleSheet.create({
     borderRightWidth: 0,
   },
   squaresContainer: {
-    height: 12,
-    borderLeftWidth: 1,
-    borderRightWidth: 1,
+    height: ".18in",
+    borderLeftWidth: 0.7,
+    borderRightWidth: 0.7,
     flexDirection: "row",
     alignItems: "flex-end",
     boxSizing: "border-box",
@@ -48,7 +48,6 @@ function SegmentedLineInput({
           key={index}
           style={[
             styles.square,
-
             index === 0 ? styles.firstSquare : {},
             index === number - 1 ? styles.lastsquare : {},
             number === 1 ? styles.borderRight : {},

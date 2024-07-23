@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
   },
   lowerText: {
     padding: "0.03in",
-    height: 22,
     textAlign: "center",
     width: "100%",
   },
@@ -41,17 +40,11 @@ function StackedBoxInput({
   debug,
   boxWidth,
   isBordered,
+  labelStyle,
 }) {
   return (
     <Row style={{ ...style }} debug={debug}>
-      <Text
-      // style={{
-      //   marginRight: '0.14in',
-      //   marginTop: '0.04in',
-      // }}
-      >
-        {label}
-      </Text>
+      <Text style={labelStyle}>{label}</Text>
       <Column
         style={{
           ...styles.container,

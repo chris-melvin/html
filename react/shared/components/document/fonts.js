@@ -104,10 +104,10 @@ const registerArial = () => {
     fonts: [
       {
         fontWeight: 400,
-        src: "https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrFJDUc1NECPY.ttf",
+        src: "../../../fonts/arial.ttf",
       },
       {
-        fontWeight: 600,
+        fontWeight: 700,
         src: "../../../fonts/ARIALBD.TTF",
       },
       {
@@ -124,7 +124,7 @@ const registerArialNarrow = () => {
     fonts: [
       {
         fontWeight: 400,
-        src: "../../../fonts/arialnarrow.ttf",
+        src: "../../../fonts/ARIALN.TTF",
       },
       {
         fontWeight: 400,

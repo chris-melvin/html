@@ -5,7 +5,7 @@ import Column from "../layout/Column";
 const styles = StyleSheet.create({
   inputField: {
     height: "0.14in",
-    borderBottomWidth: 0.5,
+    borderBottomWidth: 0.7,
     borderColor: "#000",
   },
   fieldLabel: {

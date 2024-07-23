@@ -1,12 +1,19 @@
 import { StyleSheet, View, Text } from "@react-pdf/renderer";
+import Row from "../layout/Row";
 
 const styles = StyleSheet.create({
   lineContainer: {
     width: "100%",
     display: "flex",
     marginTop: "auto",
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: "stretch",
+    marginLeft: ".04in",
+  },
+  line: {
+    borderBottomWidth: 1,
+    minHeight: "0.34in",
+    width: "100%",
   },
   fieldContainer: {},
   fieldValue: {
@@ -14,24 +21,29 @@ const styles = StyleSheet.create({
   },
   fieldLabel: {
     paddingVertical: 2,
-    borderTopWidth: 1,
     borderColor: "black",
     fontSize: "8.04px",
+    fontFamily: "Arial",
   },
   noRightBorder: {
     borderRightWidth: 0,
   },
+  labelContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginLeft: ".07in",
+    marginRight: ".07in",
+  },
 });
 
-const WideLineInput = ({ fields, style, labelStyle }) => (
+const LineInput = ({ fields, style, labelStyle }) => (
   <View style={[styles.lineContainer, style]}>
-    {fields?.map((field, index) => (
-      <View
-        key={field.label + index}
-        style={[styles.fieldContainer, { flex: field.size || 1 }]}
-      >
-        <Text style={styles.fieldValue}>{field?.value || " "}</Text>
+    <View style={styles.line}></View>
+    <Row style={styles.labelContainer}>
+      {fields?.map((field, index) => (
         <Text
+          key={field?.label}
           style={[
             styles.fieldLabel,
             labelStyle,
@@ -40,9 +52,9 @@ const WideLineInput = ({ fields, style, labelStyle }) => (
         >
           {field?.label}
         </Text>
-      </View>
-    ))}
+      ))}
+    </Row>
   </View>
 );
 
-export default WideLineInput;
+export default LineInput;
