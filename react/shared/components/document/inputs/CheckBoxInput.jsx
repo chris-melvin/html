@@ -6,7 +6,6 @@ const styles = StyleSheet.create({
   label: {
     textAlign: "center",
     fontFamily: "Arial Narrow",
-    fontSize: 8,
     paddingTop: 2,
     flexWrap: "nowrap",
     overflow: "visible",
@@ -25,10 +24,10 @@ const styles = StyleSheet.create({
   },
   square: {
     marginRight: 5,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderLeftWidth: 1,
-    borderRightWidth: 1,
+    borderTopWidth: 0.7,
+    borderBottomWidth: 0.7,
+    borderLeftWidth: 0.7,
+    borderRightWidth: 0.7,
     borderColor: "#000",
   },
   smLabel: {

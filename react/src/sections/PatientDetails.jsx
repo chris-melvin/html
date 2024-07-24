@@ -40,8 +40,9 @@ export const PatientDetails = () => {
     numberText: {
       fontSize: "8.76px",
       lineHeight: "1.2",
-      marginTop: ".1in",
-      marginLeft: ".04in",
+      marginTop: ".07in",
+      marginLeft: ".02in",
+      fontWeight: 500,
     },
     textSpacing: {
       display: "flex",
@@ -99,16 +100,32 @@ export const PatientDetails = () => {
               <Text>Vital Signs </Text> <Text>:</Text>
             </View>
             <View>
-              <TextInput label="BP:" width=".47in" />
+              <TextInput
+                labelStyle={{ fontSize: "8.76px" }}
+                label="BP :"
+                width=".47in"
+              />
             </View>
             <View>
-              <TextInput label="CR:" width=".55in" />
+              <TextInput
+                labelStyle={{ fontSize: "8.76px" }}
+                label="CR:"
+                width=".55in"
+              />
             </View>
             <View style={{ marginRight: ".15in" }}>
-              <TextInput label="RR:" width=".47in" />
+              <TextInput
+                labelStyle={{ fontSize: "8.76px" }}
+                label="RR:"
+                width=".47in"
+              />
             </View>
             <View>
-              <TextInput label="Temperature:" width=".55in" />
+              <TextInput
+                labelStyle={{ fontSize: "8.76px" }}
+                label="Temperature:"
+                width=".55in"
+              />
             </View>
           </Row>
           <Row style={{ marginBottom: ".29in" }}>

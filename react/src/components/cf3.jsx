@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     maxHeight: "100%",
     fontSize: "8.76px",
     paddingRight: ".32in",
-    paddingLeft: ".25in",
+    paddingLeft: ".26in",
     paddingVertical: ".17in",
     boxSizing: "border-box",
   },
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
 // Create Document Component
 const CF3 = () => (
   <Document>
-    <Page size="LEGAL" style={styles.page}>
+    <Page size="LEGAL">
       <Column style={styles.body}>
         {/* Page 1 Header */}
         <PhilhealthHeader />
@@ -74,7 +74,7 @@ const CF3 = () => (
       </Column>
     </Page>
 
-    <Page size="LEGAL" style={styles.page}>
+    <Page size="LEGAL">
       <Column style={styles.body2}>
         {/* PART 2 */}
 

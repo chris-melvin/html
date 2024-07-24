@@ -77,8 +77,15 @@ export const DeliveryOutcome = () => {
               rightLabel="AM"
               style={{ marginRight: ".15in" }}
               width=".25in"
+              bottomLabelFontSize="6.24px"
+              bottomLabelFontStyle="italic"
             />
-            <TimeInput rightLabel="PM" width=".25in" />
+            <TimeInput
+              rightLabel="PM"
+              width=".25in"
+              bottomLabelFontSize="6.24px"
+              bottomLabelFontStyle="italic"
+            />
           </View>
         </Row>
       </Row>
@@ -110,6 +117,7 @@ export const DeliveryOutcome = () => {
               upperText=""
               lowerText="Obstetric Index"
               boxWidth=".66in"
+              lowerTextFontSize="6.24px"
             />
             {/* TODO: FIX ALIGNMENT */}
             <Text
@@ -126,6 +134,7 @@ export const DeliveryOutcome = () => {
               upperText=""
               lowerText="AOG by LMP"
               boxWidth="1.44in"
+              lowerTextFontSize="6.24px"
             />
           </View>
           <View style={{ marginRight: ".12in" }}>
@@ -133,6 +142,7 @@ export const DeliveryOutcome = () => {
               upperText=""
               lowerText="Manner of Delivery"
               boxWidth="1.44in"
+              lowerTextFontSize="6.24px"
             />
           </View>
           <View>
@@ -140,6 +150,7 @@ export const DeliveryOutcome = () => {
               upperText=""
               lowerText="Presentation"
               boxWidth="1.44in"
+              lowerTextFontSize="6.24px"
             />
           </View>
         </Row>
@@ -166,6 +177,7 @@ export const DeliveryOutcome = () => {
               upperText=""
               lowerText="Fetal Outcome"
               boxWidth="1.44in"
+              lowerTextFontSize="6.24px"
             />
           </View>
           <View style={{ marginRight: ".12in" }}>
@@ -176,6 +188,7 @@ export const DeliveryOutcome = () => {
               upperText=""
               lowerText="Birth Weight(gm)"
               boxWidth="1.44in"
+              lowerTextFontSize="6.24px"
             />
           </View>
           <View>
@@ -183,6 +196,7 @@ export const DeliveryOutcome = () => {
               upperText=""
               lowerText="APGAR Score"
               boxWidth="1.44in"
+              lowerTextFontSize="6.24px"
             />
           </View>
         </Row>
@@ -198,7 +212,7 @@ export const DeliveryOutcome = () => {
       >
         <View style={{ marginRight: ".92in" }}>
           <Text>
-            <Text style={{ color: "#f00" }}>11.</Text> Scheduled Postpartum
+            <Text style={{ color: "#f00" }}>11. </Text> Scheduled Postpartum
             follow-up consultation 1 week after delivery
           </Text>
         </View>
@@ -211,6 +225,7 @@ export const DeliveryOutcome = () => {
         style={{
           paddingLeft: ".25in",
           paddingRight: ".1in",
+          marginBottom: ".07in",
           ...styles.text,
         }}
       >
@@ -241,8 +256,15 @@ export const DeliveryOutcome = () => {
               rightLabel="AM"
               style={{ marginRight: ".15in" }}
               width=".25in"
+              bottomLabelFontSize="6.24px"
+              bottomLabelFontStyle="italic"
             />
-            <TimeInput rightLabel="PM" width=".25in" />
+            <TimeInput
+              rightLabel="PM"
+              width=".25in"
+              bottomLabelFontSize="6.24px"
+              bottomLabelFontStyle="italic"
+            />
           </View>
         </Row>
       </Row>

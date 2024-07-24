@@ -123,9 +123,11 @@ const registerArialNarrow = () => {
     family: "Arial Narrow",
     fonts: [
       {
-        fontWeight: 400,
         src: "../../../fonts/ARIALN.TTF",
       },
+      // {
+      //   src: "../../../fonts/ArialNarrowM.ttf",
+      // },
       {
         fontWeight: 400,
         fontStyle: "italic",

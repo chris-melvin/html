@@ -13,11 +13,9 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div style={{ width: "100vw" }}>
-      <PDFViewer width="100%" height="800 ">
+    <div style={{ width: "100vw", overflowY: "hidden" }}>
+      <PDFViewer width="100%" height={700}>
         <CF3 />
-        {/* <ClaimForm1 /> */}
-        {/* <ClaimForm4 /> */}
       </PDFViewer>
     </div>
   );

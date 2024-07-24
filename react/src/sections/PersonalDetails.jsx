@@ -33,11 +33,12 @@ export const PersonalDetails = () => {
       flexDirection: "row",
       justifyContent: "space-between",
       width: "2.10in",
+      marginTop: ".1in",
     },
     numberText: {
       fontSize: "8.76px",
       lineHeight: "1.2",
-      marginLeft: ".04in",
+      marginLeft: ".02in",
     },
   });
   return (
@@ -51,14 +52,14 @@ export const PersonalDetails = () => {
           </Text>
         </View>
         <View>
-          <SegmentedLineInput number={9} width=".24in" innerHeight={12} />
+          <SegmentedLineInput number={9} width=".235in" innerHeight={12} />
         </View>
       </Row>
       {/* Part 1, number 2 */}
       <Row
         style={[
           styles.text,
-          { marginTop: ".1in", justifyContent: "space-between" },
+          { marginTop: ".01in", justifyContent: "space-between" },
         ]}
       >
         <Column>
@@ -69,7 +70,7 @@ export const PersonalDetails = () => {
           </Row>
           <Row>
             <LineInput
-              style={{ width: "5.09in" }}
+              style={{ width: "5.09in", marginLeft: ".12in" }}
               fields={[
                 { label: "Last Name," },
                 { label: "First Name," },
@@ -97,6 +98,7 @@ export const PersonalDetails = () => {
                 }}
               >
                 <TimeInput
+                  width=".30in"
                   rightLabelStyle={{
                     fontFamily: "Arial Narrow",
                     fontSize: "7.04px",
@@ -105,6 +107,7 @@ export const PersonalDetails = () => {
                   style={{ marginRight: ".15in" }}
                 />
                 <TimeInput
+                  width=".30in"
                   rightLabelStyle={{
                     fontFamily: "Arial Narrow",
                     fontSize: "7.04px",
@@ -134,6 +137,7 @@ export const PersonalDetails = () => {
                 }}
               >
                 <TimeInput
+                  width=".30in"
                   rightLabelStyle={{
                     fontFamily: "Arial Narrow",
                     fontSize: "7.04px",
@@ -142,6 +146,7 @@ export const PersonalDetails = () => {
                   style={{ marginRight: ".15in" }}
                 />
                 <TimeInput
+                  width=".30in"
                   rightLabelStyle={{
                     fontFamily: "Arial Narrow",
                     fontSize: "7.04px",

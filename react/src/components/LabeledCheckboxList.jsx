@@ -6,7 +6,13 @@ import FieldInput from "../../shared/components/document/inputs/FieldInput";
 import Row from "./layout/Row";
 import CheckBoxInput from "../../shared/components/document/inputs/CheckBoxInput";
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  text: {
+    fontSize: "7.8px",
+    fontFamily: "Arial Narrow",
+    marginBottom: ".1in",
+  },
+});
 
 export const LabeledCheckboxList = ({
   array,
@@ -24,12 +30,15 @@ export const LabeledCheckboxList = ({
       {array.map((item) => (
         <Row
           key={item}
-          style={{ display: "flex", justifyContent: "space-between" }}
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+          }}
         >
           <View>
-            <Text style={{ marginBottom: ".1in" }}>{item}</Text>
+            <Text style={styles.text}>{item}</Text>
           </View>
-          <View>
+          <View style={{ marginBottom: ".03in" }}>
             <CheckBoxInput
               isSmall={false}
               customHeight=".18in"

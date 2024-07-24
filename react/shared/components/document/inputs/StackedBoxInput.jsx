@@ -41,6 +41,7 @@ function StackedBoxInput({
   boxWidth,
   isBordered,
   labelStyle,
+  lowerTextFontSize,
 }) {
   return (
     <Row style={{ ...style }} debug={debug}>
@@ -66,7 +67,11 @@ function StackedBoxInput({
             ...(isBordered ? styles.borderedLowerText : {}),
           }}
         >
-          <Text>{lowerText}</Text>
+          <Text
+            style={{ fontSize: lowerTextFontSize, fontFamily: "Arial Narrow" }}
+          >
+            {lowerText}
+          </Text>
         </View>
       </Column>
     </Row>

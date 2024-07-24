@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     fontSize: "9.36px",
   },
   bar: {
-    marginTop: ".1in",
+    marginTop: ".07in",
   },
   barBottom: {
     marginBottom: ".1in",
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
 export const SectionTitle = ({ children, style, color }) => {
   return (
     <>
-      <FieldInput height=".02in" style={[styles.bar, style]} />
+      <FieldInput height="0" style={[styles.bar, style]} />
       <Text style={{ color: color, ...styles.label }}>{children}</Text>
       <FieldInput height="0" style={[styles.barBottom, style]} />
     </>

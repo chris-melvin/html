@@ -40,7 +40,7 @@ const SegmentedDate = ({
     <Column
       style={{
         marginLeft: dateMarginLeft,
-        marginRight: ".08in",
+        marginRight: ".04in",
       }}
     >
       <SegmentedLineInput
@@ -53,8 +53,8 @@ const SegmentedDate = ({
     <Dash />
     <Column
       style={{
-        marginLeft: ".08in",
-        marginRight: ".08in",
+        marginLeft: ".04in",
+        marginRight: ".04in",
       }}
     >
       <SegmentedLineInput
@@ -67,8 +67,8 @@ const SegmentedDate = ({
     <Dash />
     <Column
       style={{
-        marginLeft: ".08in",
-        marginRight: ".08in",
+        marginLeft: ".04in",
+        marginRight: ".04in",
       }}
     >
       <SegmentedLineInput

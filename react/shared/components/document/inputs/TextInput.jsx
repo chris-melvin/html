@@ -39,11 +39,12 @@ const TextInput = ({
   lineStyle,
   width = 20,
   fullWidth,
+  labelStyle,
   debug,
 }) => (
   <Row debug={debug} style={[styles.fieldContainer, style]}>
     <View style={styles.fieldLabel}>
-      <Text>{label}</Text>
+      <Text style={labelStyle}>{label}</Text>
     </View>
     <View
       style={[

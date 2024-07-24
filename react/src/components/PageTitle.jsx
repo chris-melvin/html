@@ -20,7 +20,7 @@ export const PageTitle = ({ children, fontSize, style }) => {
   return (
     <Column style={style}>
       <FieldInput />
-      <FieldInput height=".02in" />
+      <FieldInput height=".03in" />
       <Text
         style={[
           styles.label,
@@ -32,7 +32,7 @@ export const PageTitle = ({ children, fontSize, style }) => {
         {children}
       </Text>
       <FieldInput height="0" />
-      <FieldInput height=".02in" />
+      <FieldInput height=".03in" />
     </Column>
   );
 };

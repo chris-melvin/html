@@ -33,7 +33,7 @@ export const PrenatalConsultation = () => {
           ...styles.text,
         }}
       >
-        <View style={{ marginRight: ".67in" }}>
+        <View style={{ marginRight: ".58in" }}>
           <Text style={{ color: "#ff0000" }}>
             1. Initial Prenatal Consultation
           </Text>
@@ -72,9 +72,9 @@ export const PrenatalConsultation = () => {
         <Row>
           <Column
             style={{
-              marginLeft: ".1in",
+              marginLeft: ".04in",
               width: "2.38in",
-              marginRight: ".30in",
+              marginRight: ".25in",
             }}
           >
             <View
@@ -107,13 +107,13 @@ export const PrenatalConsultation = () => {
               </View>
             </View>
           </Column>
-          <Column style={{ width: "4.04in" }}>
+          <Column style={{ width: "4.14in" }}>
             <View
-              style={[styles.flexRowSpaceBetween, { marginBottom: ".16in" }]}
+              style={[styles.flexRowSpaceBetween, { marginBottom: ".12in" }]}
             >
-              <View>
+              <View style={{ marginRight: ".15in" }}>
                 <Text>
-                  <Text style={{ color: "#f00" }}>c.</Text> Menstrual History{" "}
+                  <Text style={{ color: "#f00" }}>c.</Text> Menstrual History
                 </Text>
               </View>
               <View style={{ display: "flex", flexDirection: "row" }}>
@@ -124,7 +124,11 @@ export const PrenatalConsultation = () => {
                   boxWidth=".12in"
                 />
                 <View>
-                  <TextInput label="Age of Menarche" width={40} />
+                  <TextInput
+                    label="Age of Menarche"
+                    labelStyle={{ marginRight: ".1in" }}
+                    width=".50in"
+                  />
                 </View>
               </View>
             </View>
@@ -132,6 +136,7 @@ export const PrenatalConsultation = () => {
               style={{
                 display: "flex",
                 flexDirection: "row",
+                fontFamily: "Arial",
               }}
             >
               <View>
@@ -140,10 +145,18 @@ export const PrenatalConsultation = () => {
                 </Text>
               </View>
               <View style={{ marginRight: ".15in" }}>
-                <TextInput label="G" />
+                <TextInput
+                  label="G"
+                  style={{ fontSize: "8.64px" }}
+                  width=".3in"
+                />
               </View>
               <View>
-                <TextInput label="P" />
+                <TextInput
+                  label="P"
+                  style={{ fontSize: "8.64px" }}
+                  width=".36in"
+                />
               </View>
               <View
                 style={{
@@ -154,25 +167,25 @@ export const PrenatalConsultation = () => {
                 <Text>(</Text>
 
                 <StackedBoxInput
-                  boxWidth=".24in"
+                  boxWidth=".30in"
                   lowerText="T"
                   style={{ paddingTop: ".1in" }}
                 />
+                <Text>,</Text>
                 <StackedBoxInput
                   boxWidth=".24in"
-                  label=","
                   lowerText="P"
                   style={{ paddingTop: ".1in" }}
                 />
+                <Text>,</Text>
                 <StackedBoxInput
                   boxWidth=".24in"
-                  label=","
                   lowerText="A"
                   style={{ paddingTop: ".1in" }}
                 />
+                <Text>,</Text>
                 <StackedBoxInput
                   boxWidth=".24in"
-                  label=","
                   lowerText="L"
                   style={{ paddingTop: ".1in" }}
                 />
@@ -204,29 +217,34 @@ export const PrenatalConsultation = () => {
         }}
       >
         <LabeledCheckboxList
-          array={["a. Multiple Pregnancy", "b. Ovarian cyst", "c. Myoma uteri"]}
-          width="1.4in"
-          marginRight=".4in"
+          array={[
+            "a.  Multiple Pregnancy",
+            "b.  Ovarian cyst",
+            "c.  Myoma uteri",
+          ]}
+          width="1.31in"
+          marginRight=".30in"
         />
 
         <LabeledCheckboxList
           array={[
-            "d. Placenta previa",
-            "e. History of 3 miscarriages",
-            "f. History of stillbirth",
+            "d.  Placenta previa",
+            "e.  History of 3 miscarriages",
+            "f.   History of stillbirth",
           ]}
-          width="1.65in"
-          marginRight=".15in"
+          width="1.450in"
+          marginRight=".3in"
         />
         <LabeledCheckboxList
           array={[
-            "g. History of pre-eclampsia",
-            "h. History of eclampsia",
-            "i. Premature contraction",
+            "g.  History of pre-eclampsia",
+            "h.  History of eclampsia",
+            "i.  Premature contraction",
           ]}
-          width="1.7in"
+          width="1.35in"
+          marginRight=".4in"
         />
-        <LabeledCheckboxList array={[]} width="2.0in" />
+        <LabeledCheckboxList array={[]} width="1.8in" />
       </Row>
       {/* 4 */}
       <View
@@ -234,6 +252,7 @@ export const PrenatalConsultation = () => {
           paddingLeft: ".25in",
           paddingRight: ".1in",
           marginBottom: ".1in",
+          marginTop: ".07in",
           ...styles.text,
         }}
       >
@@ -243,35 +262,44 @@ export const PrenatalConsultation = () => {
         </Text>
       </View>
       <Row
-        style={{ paddingLeft: ".25in", paddingRight: ".1in", ...styles.text }}
+        style={{
+          paddingLeft: ".25in",
+          paddingRight: ".1in",
+          ...styles.text,
+        }}
       >
         <LabeledCheckboxList
-          array={["a. Hypertension", "b. Heart Disease", "c. Diabetes"]}
-          width="1.4in"
+          array={["a.  Hypertension", "b.  Heart Disease", "c.  Diabetes"]}
+          width="1.31in"
+          marginRight=".30in"
+        />
+
+        <LabeledCheckboxList
+          array={[
+            "d.  Thyroid Disorder",
+            "e.  Obesity",
+            "f.  Moderate to severe asthma",
+          ]}
+          width="1.45in"
+          marginRight=".3in"
+        />
+
+        <LabeledCheckboxList
+          array={[
+            "g.  Epilepsy",
+            "h.  Renal disease",
+            "i.  Bleeding disorders",
+          ]}
+          width="1.35in"
           marginRight=".4in"
         />
 
         <LabeledCheckboxList
           array={[
-            "d. Thyroid Disorder",
-            "e. Obesity",
-            "f. Moderate to severe asthma",
+            "j.  History of previous cesarian section",
+            "k.  History of uterine myomectomy",
           ]}
-          width="1.65in"
-          marginRight=".15in"
-        />
-
-        <LabeledCheckboxList
-          array={["g. Epilepsy", "h. Renal disease", "i. Bleeding disorders"]}
-          width="1.7in"
-        />
-
-        <LabeledCheckboxList
-          array={[
-            "j. History of previous cesarian section",
-            "k. History of uterine myomectomy",
-          ]}
-          width="2.0in"
+          width="1.80in"
         />
       </Row>
 
@@ -319,18 +347,26 @@ export const PrenatalConsultation = () => {
           ...styles.text,
         }}
       >
-        <View style={{ marginRight: ".2in" }}>
+        <View style={{ marginRight: ".45in" }}>
           <Text>
             <Text style={{ color: "#f00" }}>a.</Text> Orientation to
             MCP/Availment of Benefits
           </Text>
         </View>
-        <View style={{ marginRight: ".1in" }}>
-          <CheckBoxInput />
+        <View style={{ marginRight: ".05in" }}>
+          <CheckBoxInput
+            isSmall={false}
+            customHeight=".16in"
+            customWidth=".12in"
+          />
           <Text style={{ fontStyle: "italic", fontSize: "7.8px" }}>yes</Text>
         </View>
         <View>
-          <CheckBoxInput />
+          <CheckBoxInput
+            isSmall={false}
+            customHeight=".16in"
+            customWidth=".12in"
+          />
           <Text>no</Text>
         </View>
         <View style={{ marginLeft: ".75in" }}>
@@ -384,10 +420,10 @@ export const PrenatalConsultation = () => {
               key={item}
               style={{
                 borderWidth: 0.7,
-                height: ".2in",
+                height: ".165in",
                 width: ".32in",
-                paddingTop: ".03in",
-                paddingLeft: ".065in",
+                paddingTop: ".01in",
+                paddingLeft: ".075in",
                 marginLeft: ".23in",
               }}
             >

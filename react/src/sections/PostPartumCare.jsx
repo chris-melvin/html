@@ -36,14 +36,15 @@ export const PostPartumCare = () => {
     },
     {
       number: 16,
-      label:
-        "Provided family planning service to patient (as requested by patient)",
+      label: "Provided family planning service to patient ",
+      subLabel: "(as requested by patient)",
       children: [],
     },
     {
       number: 17,
       label:
-        "Referred to partner physician for Voluntary Surgical Sterilization (as requested by pt.)",
+        "Referred to partner physician for Voluntary Surgical Sterilization ",
+      subLabel: "(as requested by pt.)",
       children: [],
     },
     {
@@ -86,13 +87,21 @@ export const PostPartumCare = () => {
         style={{
           paddingLeft: ".25",
           paddingRight: ".1in",
-          marginBottom: ".1in",
+          marginBottom: ".04in",
           fontFamily: "Arial Narrow",
           fontStyle: "italic",
         }}
       >
-        <Text style={{ marginLeft: "4.3in", marginRight: "1.30in" }}>done</Text>
-        <Text>Remarks</Text>
+        <Text
+          style={{
+            marginLeft: "4.22in",
+            marginRight: "1.30in",
+            fontSize: "7.8px",
+          }}
+        >
+          done
+        </Text>
+        <Text style={{ fontSize: "7.8px" }}>Remarks</Text>
       </Row>
       {/* Map from 13 to 18 */}
       {PostPartumCareQuestions.map((item, index) => (
@@ -114,6 +123,7 @@ export const PostPartumCare = () => {
                 <Text style={{ color: "#f00" }}>{item.number}. </Text>
               )}
               {item.label}
+              <Text style={{ fontSize: "6.96px" }}>{item?.subLabel}</Text>
             </Text>
           </View>
           {item.hasChildren ? (

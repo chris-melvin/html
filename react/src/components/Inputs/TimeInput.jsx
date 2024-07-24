@@ -18,6 +18,8 @@ const TimeInput = ({
   bottomLabel = "hh-mm",
   rightLabel,
   rightLabelStyle,
+  bottomLabelFontSize = "8.04px",
+  bottomLabelFontStyle,
   style,
   debug,
   width = ".35in",
@@ -40,7 +42,14 @@ const TimeInput = ({
           <></>
         )}
       </Row>
-      <Text style={styles.label}>{bottomLabel}</Text>
+      <Text
+        style={[
+          styles.label,
+          { fontSize: bottomLabelFontSize, fontStyle: bottomLabelFontStyle },
+        ]}
+      >
+        {bottomLabel}
+      </Text>
     </Column>
   </Row>
 );
